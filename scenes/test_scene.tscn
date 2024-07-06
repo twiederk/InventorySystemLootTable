@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/AddButton.gd" id="2_8ktls"]
 [ext_resource type="Script" path="res://scenes/ReloadButton.gd" id="3_i7v3l"]
 [ext_resource type="PackedScene" uid="uid://bd22ifuta3xe7" path="res://scenes/player.tscn" id="4_tqflw"]
-[ext_resource type="PackedScene" uid="uid://cqrema8u6x3g3" path="res://scenes/goblin.tscn" id="5_sdjqd"]
+[ext_resource type="PackedScene" uid="uid://ca1htnpbmo73y" path="res://scenes/enemy.tscn" id="5_qhchi"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -41,17 +41,21 @@ script = ExtResource("3_i7v3l")
 [node name="Player" parent="." instance=ExtResource("4_tqflw")]
 position = Vector2(460, 328)
 
-[node name="Goblin" parent="." instance=ExtResource("5_sdjqd")]
-position = Vector2(225, 95)
+[node name="enemy" parent="." instance=ExtResource("5_qhchi")]
+position = Vector2(219, 125)
+table_name = "GoblinSword"
 
-[node name="Goblin2" parent="." instance=ExtResource("5_sdjqd")]
-position = Vector2(397, 85)
+[node name="enemy2" parent="." instance=ExtResource("5_qhchi")]
+position = Vector2(482, 128)
+table_name = "GoblinSword"
 
-[node name="Goblin3" parent="." instance=ExtResource("5_sdjqd")]
-position = Vector2(541, 93)
+[node name="enemy3" parent="." instance=ExtResource("5_qhchi")]
+position = Vector2(690, 124)
+table_name = "GoblinHammer"
 
-[node name="Goblin4" parent="." instance=ExtResource("5_sdjqd")]
-position = Vector2(710, 105)
+[node name="enemy4" parent="." instance=ExtResource("5_qhchi")]
+position = Vector2(850, 124)
+table_name = "GoblinHammer"
 
 [connection signal="pressed" from="UI/DevTool/AddButton" to="UI/DevTool/AddButton" method="_on_pressed"]
 [connection signal="pressed" from="UI/DevTool/ReloadButton" to="UI/DevTool/ReloadButton" method="_on_pressed"]

@@ -2,8 +2,9 @@ class_name AbstractEnemy
 extends CharacterBody2D
 
 @export var item_node: PackedScene
+@export var table_name: String = ""
+
 var content
-var table_name = ""
 
 
 func _ready():
