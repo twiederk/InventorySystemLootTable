@@ -4,8 +4,8 @@ extends Sprite2D
 var id = ""
  
 #testing
-func _ready():
-	set_property()
+#func _ready():
+	#set_property()
  
  
 func set_property(ID = "0"):

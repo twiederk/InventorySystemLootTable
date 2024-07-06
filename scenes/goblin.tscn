@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqrema8u6x3g3"]
+
+[ext_resource type="PackedScene" uid="uid://ca1htnpbmo73y" path="res://scenes/enemy.tscn" id="1_wgook"]
+[ext_resource type="Script" path="res://scenes/goblin.gd" id="2_2atdc"]
+[ext_resource type="PackedScene" uid="uid://fglrlqtrstcx" path="res://scenes/abstract_item.tscn" id="3_213en"]
+
+[node name="Goblin" instance=ExtResource("1_wgook")]
+script = ExtResource("2_2atdc")
+item_node = ExtResource("3_213en")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs0gddqq8n64p"]
+[gd_scene load_steps=6 format=3 uid="uid://bs0gddqq8n64p"]
 
 [ext_resource type="Script" path="res://scenes/Inventory.gd" id="1_fjf8x"]
 [ext_resource type="Script" path="res://scenes/AddButton.gd" id="2_8ktls"]
-[ext_resource type="PackedScene" uid="uid://fglrlqtrstcx" path="res://scenes/abstract_item.tscn" id="3_lkocm"]
+[ext_resource type="Script" path="res://scenes/ReloadButton.gd" id="3_i7v3l"]
 [ext_resource type="PackedScene" uid="uid://bd22ifuta3xe7" path="res://scenes/player.tscn" id="4_tqflw"]
+[ext_resource type="PackedScene" uid="uid://cqrema8u6x3g3" path="res://scenes/goblin.tscn" id="5_sdjqd"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -28,10 +29,29 @@ offset_bottom = 455.0
 text = "ADD"
 script = ExtResource("2_8ktls")
 
-[node name="AbstractItem" parent="." instance=ExtResource("3_lkocm")]
-position = Vector2(459, 206)
+[node name="ReloadButton" type="Button" parent="UI/DevTool"]
+offset_left = 76.0
+offset_top = 423.0
+offset_right = 137.0
+offset_bottom = 454.0
+text = "Reload
+"
+script = ExtResource("3_i7v3l")
 
 [node name="Player" parent="." instance=ExtResource("4_tqflw")]
 position = Vector2(460, 328)
 
+[node name="Goblin" parent="." instance=ExtResource("5_sdjqd")]
+position = Vector2(225, 95)
+
+[node name="Goblin2" parent="." instance=ExtResource("5_sdjqd")]
+position = Vector2(397, 85)
+
+[node name="Goblin3" parent="." instance=ExtResource("5_sdjqd")]
+position = Vector2(541, 93)
+
+[node name="Goblin4" parent="." instance=ExtResource("5_sdjqd")]
+position = Vector2(710, 105)
+
 [connection signal="pressed" from="UI/DevTool/AddButton" to="UI/DevTool/AddButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/DevTool/ReloadButton" to="UI/DevTool/ReloadButton" method="_on_pressed"]
